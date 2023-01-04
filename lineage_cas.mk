@@ -60,4 +60,4 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Maintainer Stuff
 RICE_MAINTAINER := zinger & starraiderx
-RICE_OFFICIAL := false
+RICE_OFFICIAL := true
