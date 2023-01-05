@@ -14,20 +14,17 @@ $(call inherit-product, device/xiaomi/cas/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-
 PRODUCT_NAME := lineage_cas
 PRODUCT_DEVICE := cas
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := M2007J1SC
 
-
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-RICE_CHIPSET := "Snapdragon 865 5G"
-
-
 # riceDroid Flags
+RICE_CHIPSET := Snapdragon-865-5G
+RICE_OFFICIAL := true
 
 # Sushi Bootanimation (only 720/1080/1440 supported. if not defined, bootanimation is google bootanimation)
 SUSHI_BOOTANIMATION := 1080
@@ -48,6 +45,7 @@ TARGET_USE_PIXEL_FINGERPRINT := true
 WITH_GMS := true
 
 # Customized GMS Flags 
+TARGET_GAPPS_ARCH := arm64
 
 # Opt out of google dialer support, compiler will build aosp dialer,
 TARGET_OPTOUT_GOOGLE_TELEPHONY := false
@@ -60,4 +58,3 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Maintainer Stuff
 RICE_MAINTAINER := zinger & starraiderx
-RICE_OFFICIAL := true
