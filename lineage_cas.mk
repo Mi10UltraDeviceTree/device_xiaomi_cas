@@ -39,7 +39,7 @@ TARGET_ENABLE_BLUR := true
 TARGET_HAS_UDFPS := true
 
 # Spoof build description/fingerprint as pixel device
-TARGET_USE_PIXEL_FINGERPRINT := true
+TARGET_USE_PIXEL_FINGERPRINT := false
 
 # GMS build flags, if none were defined the package build type will be AOSP (default: false)
 WITH_GMS := true
