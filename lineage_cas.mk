@@ -40,6 +40,7 @@ TARGET_HAS_UDFPS := true
 
 # Spoof build description/fingerprint as pixel device
 TARGET_USE_PIXEL_FINGERPRINT := true
+BUILD_FINGERPRINT := google/raven/raven:13/TP1A.220905.004/8927612:user/release-keys
 
 # GMS build flags, if none were defined the package build type will be AOSP (default: false)
 WITH_GMS := true
