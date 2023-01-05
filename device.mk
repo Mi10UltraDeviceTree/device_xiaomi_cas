@@ -142,6 +142,18 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
+ifneq (,$(wildcard vendor/qcom/opensource/commonsys/system/bt))
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.bluetooth.library_name=libbluetooth_qti.so
+endif
+
+# Build Fingerprint spoofing to allow Pixel-exclusive apps
+ifeq ($(TARGET_USE_PIXEL_FINGERPRINT), true)
+    BUILD_FINGERPRINT := "google/cheetah/cheetah:13/TQ1A.230105.002.A1/9409646:user/release-keys"
+else 
+    BUILD_FINGERPRINT := "Xiaomi/cas/cas:12/RKQ1.211001.001/V13.0.6.0.SJJCNXM:user/release-keys"
+endif
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
