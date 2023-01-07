@@ -24,7 +24,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # riceDroid Flags
 RICE_CHIPSET := Snapdragon-865-5G
-RICE_OFFICIAL := true
+RICE_OFFICIAL := false
 
 # Sushi Bootanimation (only 720/1080/1440 supported. if not defined, bootanimation is google bootanimation)
 SUSHI_BOOTANIMATION := 1080
@@ -39,7 +39,7 @@ TARGET_ENABLE_BLUR := true
 TARGET_HAS_UDFPS := true
 
 # Spoof build description/fingerprint as pixel device
-TARGET_USE_PIXEL_FINGERPRINT := false
+TARGET_USE_PIXEL_FINGERPRINT := true
 
 # GMS build flags, if none were defined the package build type will be AOSP (default: false)
 WITH_GMS := true
