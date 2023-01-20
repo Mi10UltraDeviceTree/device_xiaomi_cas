@@ -57,4 +57,4 @@ TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Maintainer Stuff
-RICE_MAINTAINER := zinger & starraiderx
+RICE_MAINTAINER := zinger&starraiderx
