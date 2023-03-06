@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from the device configuration.
 $(call inherit-product, device/xiaomi/cas/device.mk)
 
-# Inherit some common Evolution X stuff.
+# Inherit some common riceDroid stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # chipset flag enclose var with "" if more than one
