@@ -346,7 +346,12 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon \
     TelephonyResCommon \
     WifiResCommon \
-    WifiResTarget
+    WifiResTarget \
+    DeviceFrameworks \
+    DeviceSystemUI \
+    DeviceTelephony \
+    SettingsProviderOverlay
+
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
