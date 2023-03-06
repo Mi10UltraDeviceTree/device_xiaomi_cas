@@ -14,49 +14,34 @@ $(call inherit-product, device/xiaomi/cas/device.mk)
 # Inherit some common riceDroid stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# chipset flag enclose var with "" if more than one
-# friendly tip: builders can use init_xxx.cpp as workaround for spacing
-# e.g. property_override("ro.rice.chipset", "Snapdragon 870 5G");
-RICE_CHIPSET := "Snapdragon-865-5G"
+# Build Flags
+TARGET_BUILD_GRAPHENEOS_CAMERA := true
+TARGET_ENABLE_BLUR := true
+WITH_GMS := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_USES_AOSP_RECOVERY := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_USES_MINI_GAPPS := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_INCLUDE_WIFI_EXT := true
+TARGET_USE_PIXEL_FINGERPRINT := true
 
-# chipset flag enclose var with "" if more than one
-# friendly tip: builders can use init_xxx.cpp as workaround for spacing
-# e.g. property_override("ro.rice.maintainer", "get riced");
+# Rice Flags
+SUSHI_BOOTANIMATION := 1080
+RICE_CHIPSET := "Snapdragon-865-5G"
 RICE_MAINTAINER := "zinger&starraiderx"
 
-# Sushi Bootanimation (only 720/1080p/1440 supported. if not defined, bootanimation is google bootanimation)
-SUSHI_BOOTANIMATION := 1080
-
-# Aperture Camera (default: not defined - skipped by the compiler)
-TARGET_BUILD_APERTURE_CAMERA := false
-
-# Graphene Camera (default: not defined - skipped by the compiler)
-TARGET_BUILD_GRAPHENEOS_CAMERA := true
-
-# disable/enable blur support, default is false
-TARGET_ENABLE_BLUR := true
-
-# UDFPS ICONS/ANIMATIONS
-TARGET_HAS_UDFPS := true
-
-# Allow usage of custom binary linker (LD), default is false
-TARGET_KERNEL_OPTIONAL_LD := false
-
-# Spoof build description/fingerprint as pixel device
-TARGET_USE_PIXEL_FINGERPRINT := false
-
-# GMS build flags, if none were defined the package build type will be AOSP (default: false)
-WITH_GMS := true
-
-# Customized GMS Flags 
-# WITH_GMS flag is required
-
-# Wether to use google (true) or AOSP (false) telephony package bundle. (defaults: false for gms core, true for pixel builds)
-TARGET_USE_GOOGLE_TELEPHONY := true
-
-# Compiler will only build GMS playstore services, its dependencies, and Gboard app.
-# package type will change from PIXEL/GMS -> CORE
-TARGET_CORE_GMS := false
-
-# extra flag under TARGET_CORE_GMS
-TARGET_CORE_GMS_EXTRAS := false 
+# Device Flags
+PRODUCT_NAME := lineage_cas
+PRODUCT_DEVICE := cas
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := M2007J1SC
+PRODUCT_MANUFACTURER := Xiaomi
+BOARD_VENDOR := Xiaomi
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+BUILD_FINGERPRINT := Xiaomi/cas/cas:12/RKQ1.211001.001/V13.0.6.0.SJJCNXM:user/release-keys
