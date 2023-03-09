@@ -34,7 +34,7 @@ TARGET_USE_PIXEL_FINGERPRINT := true
 # Rice Flags
 SUSHI_BOOTANIMATION := 1080
 RICE_CHIPSET := "Snapdragon-865-5G"
-RICE_MAINTAINER := "zinger&starraiderx"
+RICE_MAINTAINER := zinger&starraiderx
 
 # Device Flags
 PRODUCT_NAME := lineage_cas
