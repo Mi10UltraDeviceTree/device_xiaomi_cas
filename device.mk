@@ -337,17 +337,16 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
-    FrameworksResCommon \
-    FrameworksResTarget \
-    SystemUIResCommon \
-    TelephonyResCommon \
-    WifiResCommon \
-    WifiResTarget \
     DeviceFrameworks \
     DeviceSystemUI \
     DeviceTelephony \
-    SettingsProviderOverlay
-
+    FrameworksResCommon \
+    FrameworksResTarget \
+    SettingsProviderOverlay \
+    SystemUIResCommon \
+    TelephonyResCommon \
+    WifiResCommon \
+    WifiResTarget
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
