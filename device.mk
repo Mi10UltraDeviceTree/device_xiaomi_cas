@@ -340,18 +340,17 @@ PRODUCT_PACKAGES += \
     DeviceFrameworks \
     DeviceSystemUI \
     DeviceTelephony \
+    DeviceFrameworks \
+    DeviceSystemUI \
+    DeviceTelephony \
     FrameworksResCommon \
     FrameworksResTarget \
+    SettingsProviderOverlay \
     SettingsProviderOverlay \
     SystemUIResCommon \
     TelephonyResCommon \
     WifiResCommon \
-    WifiResTarget \
-    DeviceFrameworks \
-    DeviceSystemUI \
-    DeviceTelephony \
-    SettingsProviderOverlay
-
+    WifiResTarget
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
