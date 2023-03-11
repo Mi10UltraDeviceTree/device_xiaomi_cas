@@ -21,6 +21,55 @@
      for different hardware and product builds.  Do not translate. -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Flag specifying whether WFC over IMS is available on device -->
+    <bool name="config_device_wfc_ims_available">true</bool>
+
+    <!-- Flag specifying whether WFC over IMS should be available for carrier: independent of
+         carrier provisioning. If false: hard disabled. If true: then depends on carrier
+         provisioning, availability etc -->
+    <bool name="config_carrier_wfc_ims_available">true</bool>
+
+    <!-- WPA3 sap mode is supported on this device. -->
+    <bool name="config_wifi_wap3_sap_mode_enabled">true</bool>
+
+    <!-- Whether the always on display mode is available. -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
+    <!-- Control whether the always on display mode is enabled by default. This value will be used
+         during initialization when the setting is still null. -->
+    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
+    <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
+         on the headphone/microphone jack. When false use the older uevent framework. -->
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+        autodetected from the Configuration. -->
+    <bool name="config_showNavigationBar">true</bool>
+
+    <!-- Idle current for Bluetooth controller. 0 by default. -->
+    <integer name="config_bluetooth_idle_cur_ma">6</integer>
+
+    <!-- Operating volatage for Bluetooth controller. 0 by default. -->
+    <integer name="config_bluetooth_operating_voltage_mv">3700</integer>
+
+    <!-- Rx current for Bluetooth controller. 0 by default. -->
+    <integer name="config_bluetooth_rx_cur_ma">28</integer>
+
+    <!-- Tx current for Bluetooth controller. 0 by default. -->
+    <integer name="config_bluetooth_tx_cur_ma">36</integer>
+
+    <!-- Package names to use with vendor iwlan implementation. -->
+    <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
+    <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
+    <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
+
+    <!-- Navigation Bar Length (aka LabeledSeekBarPreference). 2 by default. -->
+    <integer name="gesture_navbar_length_preference">4</integer>
     
     <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
     <integer-array name="config_udfps_sensor_props" translatable="false" >
