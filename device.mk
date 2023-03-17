@@ -150,6 +150,15 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
+# Build Fingerprint spoofing to allow Pixel-exclusive apps
+ifeq ($(TARGET_USE_PIXEL_FINGERPRINT), true)
+    BUILD_FINGERPRINT := "google/cheetah/cheetah:13/TQ1A.230205.002/9471150:user/release-keys"
+    PRODUCT_BUILD_PROP_OVERRIDES += \
+        PRIVATE_BUILD_DESC="cheetah-user 13 TQ1A.230205.002 9471150 release-keys"
+else 
+    BUILD_FINGERPRINT := "Xiaomi/cas/cas:12/RKQ1.211001.001/V13.0.6.0.SJJCNXM:user/release-keys"
+endif
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
@@ -328,18 +337,16 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
-    FrameworksResCommon \
-    FrameworksResTarget \
-    SystemUIResCommon \
-    TelephonyResCommon \
-    WifiResCommon \
-    WifiResTarget \
     DeviceFrameworks \
     DeviceSystemUI \
     DeviceTelephony \
-    SettingsResCas \
-    SettingsProviderOverlay
-
+    FrameworksResCommon \
+    FrameworksResTarget \
+    SettingsProviderOverlay \
+    SystemUIResCommon \
+    TelephonyResCommon \
+    WifiResCommon \
+    WifiResTarget
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -360,6 +367,10 @@ PRODUCT_PACKAGES += \
 # PowerShare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_kona
+
+# Prebuilts
+PRODUCT_PACKAGES += \
+    MIUIGallery 
 
 # QMI
 PRODUCT_PACKAGES += \
