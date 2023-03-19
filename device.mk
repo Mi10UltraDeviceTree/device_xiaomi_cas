@@ -341,7 +341,6 @@ PRODUCT_PACKAGES += \
     DeviceSystemUI \
     DeviceTelephony \
     FrameworksResCommon \
-    FrameworksResTarget \
     SettingsProviderOverlay \
     SystemUIResCommon \
     TelephonyResCommon \
