@@ -11,13 +11,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from the device configuration.
 $(call inherit-product, device/xiaomi/cas/device.mk)
 
-# Inherit some common riceDroid stuff.
+# Inherit some common lineage X stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Build Flags
-TARGET_BUILD_GRAPHENEOS_CAMERA := false
+TARGET_BUILD_GRAPHENEOS_CAMERA := true
 TARGET_ENABLE_BLUR := true
 WITH_GMS := true
+TARGET_CORE_GMS := false
 TARGET_USE_GOOGLE_TELEPHONY := true
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -32,9 +33,9 @@ TARGET_INCLUDE_WIFI_EXT := true
 TARGET_USE_PIXEL_FINGERPRINT := true
 
 # Rice Flags
-SUSHI_BOOTANIMATION := 1080
-RICE_CHIPSET := "Snapdragon-865-5G"
-RICE_MAINTAINER := zinger&starraiderx
+TARGET_BOOT_ANIMATION_RES := 1080
+RISING_CHIPSET := "Snapdragon-865-5G"
+RISING_MAINTAINER := zinger&starraiderx
 
 # Device Flags
 PRODUCT_NAME := lineage_cas
