@@ -28,8 +28,6 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.q
 
 # Extcon sysfs
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,usb-pdphy@1700/extcon			u:object_r:sysfs_extcon:s0
-genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/extcon				u:object_r:sysfs_extcon:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon				u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/extcon				u:object_r:sysfs_extcon:s0
 
 # Wakeup source stats
@@ -45,8 +43,6 @@ genfscon sysfs /devices/platform/soc/17300000.qcom,lpass/wakeup                 
 genfscon sysfs /devices/platform/soc/soc:fingerprint_goodix/wakeup                                                                          u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c10000.qcom,pcie/wakeup                                                                               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c10000.qcom,pcie/pci0002:00/0002:00:00.0/0002:01:00.0/0306_02.01.00_EFS/wakeup                        u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/wakeup                                                                               u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/1101_00.01.00/wakeup                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-005a/wakeup                                                                         u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-3/3-0049/wakeup                                                                         u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0066/wakeup                                                                         u:object_r:sysfs_wakeup:s0
@@ -196,6 +192,8 @@ genfscon sysfs /devices/virtual/wakeup/wakeup153                                
 genfscon sysfs /devices/virtual/wakeup/wakeup154                                                                                                                 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/wakeup/wakeup155                                                                                                                 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/wakeup/wakeup156                                                                                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:sound/Listen 1 Audio Service/wakeup/wakeup160"            u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:sound/Listen 1 Audio Service/wakeup/wakeup165"            u:object_r:sysfs_wakeup:s0
 genfscon sysfs "/devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:sound/Listen 1 Audio Service/wakeup/wakeup157"            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0035/884000.i2c:qcom,smb1396@35:qcom,div2_cp_slave/power_supply/cp_slave/wakeup82/event_count           u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1e00000.qcom,ipa/wakeup/wakeup4                                                                                             u:object_r:sysfs_wakeup:s0
@@ -216,3 +214,13 @@ genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-adsp/wakeup/wakeup8         
 # Power_supply
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0055/power_supply                                                                                       u:object_r:sysfs_power_supply:s0
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-4/4-0034/884000.i2c:qcom,smb1396@34:qcom,div2_cp/power_supply                                               u:object_r:sysfs_power_supply:s0
+
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup/wakeup100    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/tx-macro/tx_swr_ctrl/wakeup/wakeup101    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup/wakeup102    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/tx-macro/tx_swr_ctrl/wakeup/wakeup102    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup/wakeup103    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/tx-macro/tx_swr_ctrl/wakeup/wakeup103    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup/wakeup104    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/tx-macro/tx_swr_ctrl/wakeup/wakeup104    u:object_r:sysfs_wakeup:s0
+
