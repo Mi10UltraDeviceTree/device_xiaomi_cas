@@ -347,7 +347,6 @@ PRODUCT_PACKAGES += \
     TelephonyResCommon \
     WifiResCommon \
     WifiResTarget \
-
     SettingsResCas \
     SettingsProviderOverlay
 
