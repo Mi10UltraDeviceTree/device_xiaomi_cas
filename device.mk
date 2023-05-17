@@ -389,7 +389,8 @@ PRODUCT_PACKAGES += \
 
 # Prebuilts
 PRODUCT_PACKAGES += \
-    MIUIGallery 
+    MIUIGallery \
+    KernelSU
 
 # QMI
 PRODUCT_PACKAGES += \
