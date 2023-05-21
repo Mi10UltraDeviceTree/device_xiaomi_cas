@@ -398,7 +398,8 @@ PRODUCT_PACKAGES += \
 
 # Prebuilts
 PRODUCT_PACKAGES += \
-    MiuiGallery 
+    MiuiGallery \
+	MiuiVideo
 
 # QTI
 PRODUCT_PACKAGES += \
