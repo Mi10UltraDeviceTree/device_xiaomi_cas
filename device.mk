@@ -391,7 +391,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MiuiGallery \
 	MiuiVideo \
-    KernelSu
+    KernelSu \
+    AdAway
 
 # QMI
 PRODUCT_PACKAGES += \
