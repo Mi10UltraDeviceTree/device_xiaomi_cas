@@ -389,17 +389,13 @@ PRODUCT_PACKAGES += \
 
 # Prebuilts
 PRODUCT_PACKAGES += \
-    MIUIGallery \
-    KernelSU
+    MiuiGallery \
+	MiuiVideo \
+    KernelSu
 
 # QMI
 PRODUCT_PACKAGES += \
     libjson
-
-# Prebuilts
-PRODUCT_PACKAGES += \
-    MiuiGallery \
-	MiuiVideo
 
 # QTI
 PRODUCT_PACKAGES += \
