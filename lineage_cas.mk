@@ -15,7 +15,7 @@ $(call inherit-product, device/xiaomi/cas/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Build Flags
-TARGET_BUILD_GRAPHENEOS_CAMERA := true
+TARGET_BUILD_GRAPHENE_CAMERA := true
 TARGET_ENABLE_BLUR := true
 WITH_GMS := true
 TARGET_CORE_GMS := false
