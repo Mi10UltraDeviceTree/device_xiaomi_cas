@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021 The arrowOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_cas.mk
+    $(LOCAL_DIR)/arrow_cas.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_cas-eng \
-    lineage_cas-user \
-    lineage_cas-userdebug
+    arrow_cas-eng \
+    arrow_cas-user \
+    arrow_cas-userdebug

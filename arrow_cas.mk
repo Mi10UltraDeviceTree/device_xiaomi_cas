@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/cas/device.mk)
 
 # Inherit some common lineage X stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Build Flags
 TARGET_BUILD_GRAPHENE_CAMERA := true
@@ -38,7 +38,7 @@ RISING_CHIPSET := "Snapdragon-865-5G"
 RISING_MAINTAINER := zinger&starraiderx
 
 # Device Flags
-PRODUCT_NAME := lineage_cas
+PRODUCT_NAME := arrow_cas
 PRODUCT_DEVICE := cas
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := M2007J1SC
