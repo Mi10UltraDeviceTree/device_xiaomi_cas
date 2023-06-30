@@ -1,5 +1,7 @@
 # Camera
+ro.miui.notch=1
 vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam
+persist.vendor.camera.privapp.list=com.android.camera
 log.tag.CHIUSECASE=ERROR
 
 # Charger
