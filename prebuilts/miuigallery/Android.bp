@@ -1,9 +1,0 @@
-android_app_import {
-        name: "MIUIGallery",
-        apk: "Gallery.apk",
-        presigned: true,
-        dex_preopt: {
-                enabled: false,
-        },
-        product_specific: true,
-}
