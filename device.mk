@@ -387,13 +387,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_kona
 
-# Prebuilts
-PRODUCT_PACKAGES += \
-    MiuiGallery \
-	MiuiVideo \
-    KernelSu \
-    AdAway
-
 # QMI
 PRODUCT_PACKAGES += \
     libjson
