@@ -1,0 +1,10 @@
+android_app_import {
+	name: "adaway",
+	owner: "f-droid",
+	apk: "adaway.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
