@@ -6,6 +6,8 @@
 
 DEVICE_PATH := device/xiaomi/cas
 
+ALLOW_MISSING_DEPENDENCIES := true
+
 # AVB
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3

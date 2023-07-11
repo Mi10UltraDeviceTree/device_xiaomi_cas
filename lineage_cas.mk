@@ -17,13 +17,10 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Build Flags
 TARGET_BUILD_GRAPHENE_CAMERA := true
 TARGET_ENABLE_BLUR := true
-WITH_GMS := true
-TARGET_CORE_GMS := false
 TARGET_USE_GOOGLE_TELEPHONY := true
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_USES_MINI_GAPPS := false
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_SUPPORTS_CALL_RECORDING := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
@@ -32,10 +29,11 @@ EXTRA_UDFPS_ANIMATIONS := true
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_USE_PIXEL_FINGERPRINT := true
 
-# Rice Flags
-TARGET_BOOT_ANIMATION_RES := 1080
-RISING_CHIPSET := "Snapdragon-865-5G"
-RISING_MAINTAINER := zinger&starraiderx
+# ROM Flags
+TARGET_USE_PIXEL_FRAMEWORK := true
+ALPHA_MAINTAINER := zinger
+ALPHA_BUILD_TYPE := Unofficial
+GAPPS_BUILD_TYPE := 0 # 0: vanilla, 1: core_gapps, 2: full_gapps
 
 # Device Flags
 PRODUCT_NAME := lineage_cas
