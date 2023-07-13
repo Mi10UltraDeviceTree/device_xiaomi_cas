@@ -386,7 +386,11 @@ PRODUCT_PACKAGES += \
 # PowerShare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_kona
-   
+
+# Prebuilts
+PRODUCT_PACKAGES += \
+    lawnicons
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson

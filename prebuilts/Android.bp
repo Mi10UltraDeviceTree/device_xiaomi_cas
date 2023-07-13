@@ -1,0 +1,9 @@
+android_app_import {
+	name: "lawnicons",
+	apk: "lawnicons.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: false,
+}
