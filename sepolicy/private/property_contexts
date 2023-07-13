@@ -22,6 +22,9 @@ ro.ril.oem.meid                 u:object_r:deviceid_prop:s0
 ro.cust.test                    u:object_r:exported_system_prop:s0
 ro.miui.                        u:object_r:exported_system_prop:s0
 
+# SettingsLib
+settingsdebug.instant.packages u:object_r:settingslib_prop:s0
+
 #
 persist.sensor.sardisable		u:object_r:exported_system_prop:s0
 invn.hal.verbose.				u:object_r:exported_system_prop:s0
