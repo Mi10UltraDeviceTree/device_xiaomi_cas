@@ -35,7 +35,7 @@ TARGET_USE_PIXEL_FINGERPRINT := true
 # Rice Flags
 TARGET_BOOT_ANIMATION_RES := 1080
 RISING_CHIPSET := "Snapdragon-865-5G"
-RISING_MAINTAINER := zinger&starraiderx
+RISING_MAINTAINER := zinger
 
 # Device Flags
 PRODUCT_NAME := lineage_cas
