@@ -29,11 +29,10 @@ EXTRA_UDFPS_ANIMATIONS := true
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_USE_PIXEL_FINGERPRINT := true
 
-# ROM Flags
-TARGET_USE_PIXEL_FRAMEWORK := true
-ALPHA_MAINTAINER := zinger
-ALPHA_BUILD_TYPE := Unofficial
-GAPPS_BUILD_TYPE := 0 # 0: vanilla, 1: core_gapps, 2: full_gapps
+# Rice Flags
+TARGET_BOOT_ANIMATION_RES := 1080
+RISING_CHIPSET := "Snapdragon-865-5G"
+RISING_MAINTAINER := zinger
 
 # Device Flags
 PRODUCT_NAME := lineage_cas
