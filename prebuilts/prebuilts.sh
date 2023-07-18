@@ -24,7 +24,7 @@ function fetchPrebuilts() {
         file_last_update=$(echo $gh_json | jq -r '.assets[0].updated_at' | date -d `cut -f1 -d"T"` +"%Y%m%d")
             apk_down_url=$(echo $gh_json | jq -r '.assets[0].browser_download_url')
 
-        if [[ -f "${DOWN_PATH}/${1}/${1}.apk" ]]; then
+        if [[ -f "${DOWN_PATH}/${1}.apk" ]]; then
             FILE_DATE=$(/bin/date +%Y%m%d -d "$(/usr/bin/stat -c %x "${DOWN_PATH}/${1}/${1}.apk")")
         else
             FILE_DATE=000000
@@ -34,7 +34,7 @@ function fetchPrebuilts() {
             echo "We already have the latest version of ${1}"
         else
             echo "Grabbing the latest version of ${1}"
-            wget -q -O "${DOWN_PATH}/${1}/${1}.apk" $apk_down_url
+            wget -q -O "${DOWN_PATH}/${1}.apk" $apk_down_url
 
             commit_msg+=("- ${1}: Updated to latest build [$file_last_update]\n")
 
@@ -43,7 +43,7 @@ function fetchPrebuilts() {
         fi
     else
         echo "Looks like theres no internet connection"
-        if [[ -f "${DOWN_PATH}/${1}/${1}.apk" ]]; then
+        if [[ -f "${DOWN_PATH}/${1}.apk" ]]; then
             echo "An old version of ${1} exists, using it for now."
         else
             echo "Nothing found! ${1} won't be available in this build!"
