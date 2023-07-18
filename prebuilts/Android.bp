@@ -1,9 +1,90 @@
 android_app_import {
-	name: "lawnicons",
+	name: "AdAway",
+	apk: "AdAway.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "DroidMusic",
+	apk: "DroidMusic.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "DuckDuckGo",
+	apk: "DuckDuckGo.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+	overrides: ["Browser2"],
+}
+
+android_app_import {
+	name: "Lawnicons",
 	apk: "lawnicons.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
 	privileged: false,
+	product_specific: true,
+}
+
+android_app_import {
+        name: "SimpleCalendar",
+        apk: "SimpleCalendar.apk",
+        presigned: true,
+        dex_preopt: {
+                enabled: false,
+        },
+        privileged: true,
+        product_specific: true,
+        overrides: ["Calendar"],
+}
+
+android_app_import {
+        name: "SimpleGallery",
+        apk: "SimpleGallery.apk",
+        presigned: true,
+        dex_preopt: {
+                enabled: false,
+        },
+        privileged: true,
+        product_specific: true,
+        overrides: ["Gallery2"],
+}
+
+android_app_import {
+        name: "WeatherIcons",
+        apk: "WeatherIcons.apk",
+        presigned: true,
+        dex_preopt: {
+                enabled: false,
+        },
+        privileged: true,
+        product_specific: true,
+}
+
+android_app_import {
+        name: "stats",
+        apk: "stats.apk",
+        presigned: true,
+        dex_preopt: {
+                enabled: false,
+        },
+        privileged: true,
+        product_specific: true,
 }
