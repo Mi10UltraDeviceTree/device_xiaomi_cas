@@ -397,9 +397,9 @@ ifeq ($(INCLUDE_PREBUILT_APPS), true)
         packages/apps/prebuilts
     PRODUCT_PACKAGES += \
         AdAway \
-        DroidMusic \
         DuckDuckGo \
         Lawnicons \
+        Metro \
         SimpleCalendar \
         SimpleGallery \
         WeatherIcons
