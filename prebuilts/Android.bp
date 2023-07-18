@@ -34,7 +34,7 @@ android_app_import {
 
 android_app_import {
 	name: "Lawnicons",
-	apk: "lawnicons.apk",
+	apk: "Lawnicons.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,

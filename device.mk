@@ -394,7 +394,7 @@ endif
 
 ifeq ($(INCLUDE_PREBUILT_APPS), true)
     PRODUCT_SOONG_NAMESPACES += \
-        packages/apps/Prebuilts
+        packages/apps/prebuilts
     PRODUCT_PACKAGES += \
         AdAway \
         DroidMusic \
