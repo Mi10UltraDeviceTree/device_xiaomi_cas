@@ -402,9 +402,7 @@ ifeq ($(INCLUDE_PREBUILT_APPS), true)
         Lawnicons \
         SimpleCalendar \
         SimpleGallery \
-        WeatherIcons \
-        stats \
-
+        WeatherIcons
 endif
 
 # QMI
