@@ -6,9 +6,5 @@
   {
     "repository": "android_kernel_xiaomi_cas",
     "target_path": "kernel/xiaomi/cas"
-  },
-  {
-    "repository": "packages_apps_Prebuilts",
-    "target_path": "packages/apps/Prebuilts"
   }
 ]

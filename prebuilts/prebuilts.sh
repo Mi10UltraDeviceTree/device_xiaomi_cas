@@ -25,7 +25,7 @@ function fetchPrebuilts() {
             apk_down_url=$(echo $gh_json | jq -r '.assets[0].browser_download_url')
 
         if [[ -f "${DOWN_PATH}/${1}.apk" ]]; then
-            FILE_DATE=$(/bin/date +%Y%m%d -d "$(/usr/bin/stat -c %x "${DOWN_PATH}/${1}/${1}.apk")")
+            FILE_DATE=$(/bin/date +%Y%m%d -d "$(/usr/bin/stat -c %x "${DOWN_PATH}/${1}.apk")")
         else
             FILE_DATE=000000
         fi

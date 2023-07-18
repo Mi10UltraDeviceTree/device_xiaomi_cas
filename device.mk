@@ -385,9 +385,6 @@ PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_kona
 
 # Prebuilts
-PRODUCT_PACKAGES += \
-    lawnicons
-
 ifeq ($(INCLUDE_MIUICAM), true)
     $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/MiuiCamera.mk)
     TARGET_BUILD_GRAPHENE_CAMERA := false
@@ -398,6 +395,16 @@ endif
 ifeq ($(INCLUDE_PREBUILT_APPS), true)
     PRODUCT_SOONG_NAMESPACES += \
         packages/apps/Prebuilts
+    PRODUCT_PACKAGES += \
+        AdAway \
+        DroidMusic \
+        DuckDuckGo \
+        Lawnicons \
+        SimpleCalendar \
+        SimpleGallery \
+        WeatherIcons \
+        stats \
+
 endif
 
 # QMI

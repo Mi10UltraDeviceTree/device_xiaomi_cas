@@ -76,6 +76,6 @@ git clone --depth=1 https://github.com/AcmeUI/android_hardware_qcom_media -b taf
 
 echo -e "                                             "
 echo -e "${BPURPLE}Adding Prebuilt Apps Repo${NC}"
-git clone https://github.com/ArrowOS/android_packages_apps_ArrowPrebuilts packages/apps/Prebuilts
-bash mv $ANDROID_BUILD_TOP/packages/apps/Prebuilts/ArrowPrebuilts.sh $ANDROID_BUILD_TOP/packages/apps/Prebuilts/prebuilts.sh
-bash $ANDROID_BUILD_TOP/packages/apps/Prebuilts/prebuilts.sh
+git clone https://github.com/ArrowOS/android_packages_apps_ArrowPrebuilts device/xiaomi/cas/prebuilts
+mv device/xiaomi/cas/prebuilts/ArrowPrebuilts.sh device/xiaomi/cas/prebuilts/prebuilts.sh
+bash device/xiaomi/cas/prebuilts/prebuilts.sh
