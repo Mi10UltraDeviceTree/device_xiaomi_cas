@@ -391,6 +391,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lawnicons
 
+ifeq ($(INCLUDE_PREBUILT_APPS), true)
+    PRODUCT_SOONG_NAMESPACES += \
+        packages/apps/Prebuilts
+endif
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson

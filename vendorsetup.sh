@@ -73,3 +73,9 @@ echo -e "${BPURPLE}Cloning media HAL [5/5]${NC}"
 # Media HALs
 #rm -rf hardware/qcom-caf/sm8250/media
 git clone --depth=1 https://github.com/AcmeUI/android_hardware_qcom_media -b taffy-caf-sm8250 hardware/qcom-caf/sm8250/media
+
+echo -e "                                             "
+echo -e "${BPURPLE}Adding Prebuilt Apps Repo${NC}"
+git clone https://github.com/ArrowOS/android_packages_apps_ArrowPrebuilts packages/apps/Prebuilts
+bash mv $ANDROID_BUILD_TOP/packages/apps/Prebuilts/ArrowPrebuilts.sh $ANDROID_BUILD_TOP/packages/apps/Prebuilts/prebuilts.sh
+bash $ANDROID_BUILD_TOP/packages/apps/Prebuilts/prebuilts.sh
