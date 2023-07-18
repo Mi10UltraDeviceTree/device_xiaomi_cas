@@ -59,12 +59,13 @@ fetchPrebuilts SimpleCalendar https://api.github.com/repos/SimpleMobileTools/Sim
 fetchPrebuilts SimpleGallery https://api.github.com/repos/SimpleMobileTools/Simple-Gallery/releases/latest
 fetchPrebuilts AdAway https://api.github.com/repos/AdAway/AdAway/releases/latest
 fetchPrebuilts Lawnicons https://api.github.com/repos/LawnchairLauncher/lawnicons/releases/latest
+fetchPrebuilts Retro https://api.github.com/repos/RetroMusicPlayer/RetroMusicPlayer/releases/latest
 
 # git commit stage
 if [ ${#commit_msg[@]} -ne 0 ]; then
     cd $DOWN_PATH
     git add .
 
-    git commit -m "Prebuilts: Update [check description]" -m "$(echo -e ${commit_msg[*]})"
-    echo "Committed locally, push to gerrit!"
+    git commit -m "Prebuilts: Apps Version Update [check description]" -m "$(echo -e ${commit_msg[*]})"
+    echo "Committed locally"
 fi

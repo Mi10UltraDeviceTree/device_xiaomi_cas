@@ -6,18 +6,6 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
-	name: "DroidMusic",
-	apk: "DroidMusic.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
 }
 
 android_app_import {
@@ -28,8 +16,6 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: true,
-	product_specific: true,
-	overrides: ["Browser2"],
 }
 
 android_app_import {
@@ -40,7 +26,16 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: false,
-	product_specific: true,
+}
+
+android_app_import {
+	name: "Retro",
+	apk: "Retro.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: false,
 }
 
 android_app_import {
@@ -51,8 +46,6 @@ android_app_import {
                 enabled: false,
         },
         privileged: true,
-        product_specific: true,
-        overrides: ["Calendar"],
 }
 
 android_app_import {
@@ -63,8 +56,6 @@ android_app_import {
                 enabled: false,
         },
         privileged: true,
-        product_specific: true,
-        overrides: ["Gallery2"],
 }
 
 android_app_import {
@@ -75,7 +66,6 @@ android_app_import {
                 enabled: false,
         },
         privileged: true,
-        product_specific: true,
 }
 
 android_app_import {
@@ -86,5 +76,4 @@ android_app_import {
                 enabled: false,
         },
         privileged: true,
-        product_specific: true,
 }

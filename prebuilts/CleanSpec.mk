@@ -1,4 +1,5 @@
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/DuckDuckGo)
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Retro)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Lawnicons)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/SimpleGallery)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/SimpleCalender)
