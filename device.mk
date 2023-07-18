@@ -19,6 +19,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/cas/cas-vendor.mk)
 
+# Call the MiuiCamera setup
+#$(call inherit-product-if-exists, vendor/xiaomi/cas-miuicamera/products/miuicamera.mk)
+
 # SDCardFS Deprecation ## https://source.android.com/devices/storage/sdcardfs-deprecate
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
@@ -380,26 +383,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
-# PowerShare
-PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.xiaomi_kona
-
 # Prebuilts
 PRODUCT_PACKAGES += \
-    lawnicons
-
-ifeq ($(INCLUDE_MIUICAM), true)
-    $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/MiuiCamera.mk)
-    TARGET_BUILD_GRAPHENE_CAMERA := false
-    PRODUCT_SOONG_NAMESPACES += \
-        vendor/xiaomi/miuicamera
-endif
-
-ifeq ($(INCLUDE_PREBUILT_APPS), true)
-    PRODUCT_SOONG_NAMESPACES += \
-        packages/apps/Prebuilts
-endif
-
+    adaway \
+    XiaomiParts
+    
 # QMI
 PRODUCT_PACKAGES += \
     libjson
