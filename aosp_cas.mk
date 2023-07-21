@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/cas/device.mk)
 
 # Inherit some common lineage X stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Build Flags
 TARGET_ENABLE_BLUR := true
@@ -40,7 +40,7 @@ RISING_CHIPSET := "Snapdragon-865-5G"
 RISING_MAINTAINER := zinger
 
 # Device Flags
-PRODUCT_NAME := lineage_cas
+PRODUCT_NAME := aosp_cas
 PRODUCT_DEVICE := cas
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := M2007J1SC
