@@ -398,8 +398,7 @@ ifeq ($(INCLUDE_PREBUILT_APPS), true)
     PRODUCT_PACKAGES += \
         AdAway \
         DuckDuckGo \
-        Lawnicons \
-        Metro \
+        Retro \
         SimpleCalendar \
         SimpleGallery \
         WeatherIcons
