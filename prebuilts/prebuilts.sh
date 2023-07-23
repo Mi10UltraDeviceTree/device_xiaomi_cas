@@ -1,0 +1,71 @@
+#!/bin/bash
+
+#Constants
+CUR_DIR=$(pwd)
+DOWN_PATH="$ANDROID_BUILD_TOP/device/xiaomi/cas/prebuilts"
+commit_msg=()
+
+#jq check
+is_jq=$(which jq)
+if [[ -z $is_jq ]]; then
+    echo "please install jq"
+    if [ $(command -v apt) ]; then
+        echo "sudo apt install jq"
+    elif [ $(command -v pacman) ]; then
+        echo "sudo pacman -S jq"
+    fi
+    exit 0
+fi
+
+function fetchPrebuilts() {
+
+    if ping -q -c 1 -W 1 8.8.8.8 >/dev/null; then
+        gh_json=$(curl -s "$2")
+        file_last_update=$(echo $gh_json | jq -r '.assets[0].updated_at' | date -d `cut -f1 -d"T"` +"%Y%m%d")
+            apk_down_url=$(echo $gh_json | jq -r '.assets[0].browser_download_url')
+
+        if [[ -f "${DOWN_PATH}/${1}.apk" ]]; then
+            FILE_DATE=$(/bin/date +%Y%m%d -d "$(/usr/bin/stat -c %x "${DOWN_PATH}/${1}.apk")")
+        else
+            FILE_DATE=000000
+        fi
+
+        if [[ $FILE_DATE -ge $file_last_update ]]; then
+            echo "We already have the latest version of ${1}"
+        else
+            echo "Grabbing the latest version of ${1}"
+            wget -q -O "${DOWN_PATH}/${1}.apk" $apk_down_url
+
+            commit_msg+=("- ${1}: Updated to latest build [$file_last_update]\n")
+
+            echo "${1} updated to latest version"
+            cd $CUR_DIR
+        fi
+    else
+        echo "Looks like theres no internet connection"
+        if [[ -f "${DOWN_PATH}/${1}.apk" ]]; then
+            echo "An old version of ${1} exists, using it for now."
+        else
+            echo "Nothing found! ${1} won't be available in this build!"
+            fi
+    fi
+}
+
+# parameters
+# 1 - App name
+# 2 - App apk url
+fetchPrebuilts DuckDuckGo https://api.github.com/repos/duckduckgo/Android/releases/latest
+fetchPrebuilts SimpleCalendar https://api.github.com/repos/SimpleMobileTools/Simple-Calendar/releases/latest
+fetchPrebuilts SimpleGallery https://api.github.com/repos/SimpleMobileTools/Simple-Gallery/releases/latest
+fetchPrebuilts AdAway https://api.github.com/repos/AdAway/AdAway/releases/latest
+fetchPrebuilts Lawnicons https://api.github.com/repos/LawnchairLauncher/lawnicons/releases/latest
+fetchPrebuilts Retro https://api.github.com/repos/RetroMusicPlayer/RetroMusicPlayer/releases/latest
+
+# git commit stage
+if [ ${#commit_msg[@]} -ne 0 ]; then
+    cd $DOWN_PATH
+    git add .
+
+    git commit -m "Prebuilts: Apps Version Update [check description]" -m "$(echo -e ${commit_msg[*]})"
+    echo "Committed locally"
+fi
