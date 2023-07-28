@@ -1,2 +1,0 @@
-# Allow XiaomiParts to get settingsdebug.instant.packages prop
-get_prop(devicesettings_app, settingslib_prop)
