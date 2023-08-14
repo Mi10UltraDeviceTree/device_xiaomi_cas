@@ -384,12 +384,25 @@ PRODUCT_PACKAGES += \
 # PowerShare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_kona
-   
+
 # Prebuilts
 ifeq ($(INCLUDE_MIUICAM), true)
     $(call inherit-product-if-exists, vendor/xiaomi/cas-miuicamera/products/miuicamera.mk)
     TARGET_BUILD_GRAPHENE_CAMERA := false
 endif
+
+ifeq ($(INCLUDE_PREBUILT_APPS), true)
+    PRODUCT_SOONG_NAMESPACES += \
+        packages/apps/prebuilts
+    PRODUCT_PACKAGES += \
+        AdAway \
+        DuckDuckGo \
+        Retro \
+        SimpleCalendar \
+        SimpleGallery \
+        WeatherIcons
+endif
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson
