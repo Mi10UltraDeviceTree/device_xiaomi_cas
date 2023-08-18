@@ -17,7 +17,6 @@ $(call inherit-product, vendor/arrow/config/common.mk)
 # Build Flags
 TARGET_BUILD_GRAPHENE_CAMERA := true
 TARGET_ENABLE_BLUR := true
-WITH_GMS := true
 TARGET_CORE_GMS := false
 TARGET_USE_GOOGLE_TELEPHONY := true
 TARGET_USES_AOSP_RECOVERY := true
@@ -31,11 +30,14 @@ TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_USE_PIXEL_FINGERPRINT := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Rice Flags
 TARGET_BOOT_ANIMATION_RES := 1080
-RISING_CHIPSET := "Snapdragon-865-5G"
-RISING_MAINTAINER := zinger&starraiderx
+IS_OFFICIAL := false
+DEVICE_MAINTAINER := zinger
+ARROW_BETA := true
+ARROW_GAPPS := true
 
 # Device Flags
 PRODUCT_NAME := arrow_cas
