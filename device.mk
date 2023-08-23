@@ -158,12 +158,11 @@ PRODUCT_PACKAGES += \
 
 # Build Fingerprint spoofing to allow Pixel-exclusive apps
 ifeq ($(TARGET_USE_PIXEL_FINGERPRINT), true)
-    BUILD_FINGERPRINT := "google/cheetah/cheetah:13/TQ1A.230205.002/9471150:user/release-keys"
+    BUILD_FINGERPRINT := "google/cheetah/cheetah:13/TD1A.220804.031/9071314:user/release-keys"
     PRODUCT_BUILD_PROP_OVERRIDES += \
-        PRIVATE_BUILD_DESC="cheetah-user 13 TQ1A.230205.002 9471150 release-keys"
+        PRIVATE_BUILD_DESC="cheetah-user-13-TD1A.220804.031-9071314-release-keys"
 else 
-    BUILD_FINGERPRINT := " Xiaomi/cas/cas:13/RKQ1.211001.001/V14.0.1.0.TJJCNXM:user/release-keys
-"
+    BUILD_FINGERPRINT := "Xiaomi/cas/cas:13/RKQ1.211001.001/V14.0.1.0.TJJCNXM:user/release-keys"
 endif
 
 # Camera
