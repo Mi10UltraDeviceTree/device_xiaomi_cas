@@ -16,3 +16,9 @@ ro.com.google.lens.oem_camera_package=com.android.camera
 persist.sys.fuse.passthrough.enable=true
 
 ro.product.marketname=Mi 10 Ultra
+
+# ADB
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
