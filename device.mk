@@ -162,7 +162,7 @@ ifeq ($(TARGET_USE_PIXEL_FINGERPRINT), true)
     PRODUCT_BUILD_PROP_OVERRIDES += \
         PRIVATE_BUILD_DESC="cheetah-user-13-TD1A.220804.031-9071314-release-keys"
 else 
-    BUILD_FINGERPRINT := "Xiaomi/cas/cas:13/RKQ1.211001.001/V14.0.1.0.TJJCNXM:user/release-keys"
+    BUILD_FINGERPRINT := "Xiaomi/cas/cas:13/RKQ1.211001.001/V14.0.2.0.TJJCNXM:user/release-keys"
 endif
 
 # Camera
