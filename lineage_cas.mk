@@ -15,7 +15,7 @@ $(call inherit-product, device/xiaomi/cas/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Build Flags
-TARGET_BUILD_GRAPHENE_CAMERA := true
+TARGET_BUILD_GRAPHENE_CAMERA := false
 TARGET_ENABLE_BLUR := true
 TARGET_USE_GOOGLE_TELEPHONY := true
 TARGET_USES_AOSP_RECOVERY := true
@@ -28,11 +28,13 @@ TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_USE_PIXEL_FINGERPRINT := true
+INCLUDE_PREBUILT_APPS := false
 
 # Rice Flags
 TARGET_BOOT_ANIMATION_RES := 1080
 RISING_CHIPSET := "Snapdragon-865-5G"
-RISING_MAINTAINER := zinger
+RISING_MAINTAINER := Zinger
+WITH_GMS := true
 
 # Device Flags
 PRODUCT_NAME := lineage_cas

@@ -386,7 +386,16 @@ PRODUCT_PACKAGES += \
 # PowerShare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_kona
-   
+ifeq ($(INCLUDE_PREBUILT_APPS), true)
+    PRODUCT_SOONG_NAMESPACES += \
+        packages/apps/prebuilts
+    PRODUCT_PACKAGES += \
+        DuckDuckGo \
+        SimpleCalendar \
+        SimpleGallery \
+        WeatherIcons
+endif
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson
