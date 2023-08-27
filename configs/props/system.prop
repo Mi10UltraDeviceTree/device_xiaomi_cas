@@ -15,6 +15,9 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 
+# LMK
+ro.config.low_ram=false
+
 # RIL
 persist.vendor.radio.report_codec=1
 ril.subscription.types=NV,RUIM
