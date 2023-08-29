@@ -112,7 +112,10 @@ vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
-bluetooth.hardware.power.operating_voltage_mv=3300
+bluetooth.hardware.power.idle_cur_ma=6
+bluetooth.hardware.power.operating_voltage_mv=3700
+bluetooth.hardware.power.rx_cur_ma=28
+bluetooth.hardware.power.tx_cur_ma=36
 bluetooth.profile.a2dp.source.enabled?=true
 bluetooth.profile.asha.central.enabled?=true
 bluetooth.profile.avrcp.target.enabled?=true
@@ -170,13 +173,13 @@ ro.surface_flinger.protected_contents=true
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.vendor.display.sensortype=2
-vendor.display.comp_mask=0
+vendor.display.comp_mask=2
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_offline_rotator=1
 vendor.display.disable_scaler=0
-vendor.display.enable_async_powermode=0
+vendor.display.enable_async_powermode=1
 vendor.display.enable_optimize_refresh=1
 vendor.display.enable_posted_start_dyn=1
 vendor.display.qdcm.disable_factory_mode=1
@@ -225,16 +228,22 @@ ro.hardware.vulkan=adreno
 ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
 
-# HVDCP
-persist.vendor.pps.disallowed=1
-persist.vendor.hvdcp_opti.disallowed=1
-
 # Keystore
 ro.hardware.keystore_desede=true
 
 # Media
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
+media.stagefright.enable-aac=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-http=true
+media.stagefright.enable-player=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
+# Netflix
+ro.netflix.bsp_rev=Q8250-19134-1
 
 # NFC
 ro.camera.notify_nfc=1
