@@ -267,6 +267,7 @@ persist.sys.oem.otg_support=true
 vendor.power.pasr.enabled=false
 
 # Perf
+ro.vendor.perf.scroll_opt=true
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Qualcomm System Daemon
