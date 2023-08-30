@@ -223,7 +223,7 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 vendor.gatekeeper.disable_spu=true
 
 # GPS
-persist.backup.ntpServer=0.pool.ntp.org
+persist.backup.ntpServer=time.cloudflare.com
 
 # Graphics
 debug.egl.hw=0
