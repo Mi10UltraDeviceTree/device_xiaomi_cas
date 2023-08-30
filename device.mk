@@ -107,6 +107,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libsndmonitor \
     libtinycompress \
+    libvisualizer \
     libvolumelistener
 
 PRODUCT_COPY_FILES += \
