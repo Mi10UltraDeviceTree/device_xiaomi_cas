@@ -7,3 +7,4 @@ attribute hal_camerapostproc_xiaomi_hwservice;
 attribute hal_misys_hwservice;
 attribute hal_misys;
 attribute vendor_fingerprint_prop;
+attribute thermal_data_file;
