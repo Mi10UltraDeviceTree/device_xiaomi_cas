@@ -18,6 +18,11 @@
     <!-- Ambient settings -->
     <string name="ambient_enable">Use ambient display</string>
 
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_enable_title">DC Dimming</string>
+    <string name="dc_dimming_enable_summary">Reduce damage to eyes in low light environments</string>
+    <string name="dc_dimming_enable_summary_not_supported">The current kernel does not support DC dimming</string>
+
     <!-- Dirac settings: Headset types -->
     <string name="dirac_headset_earbuds">Mi Earbuds</string>
     <string name="dirac_headset_in_ear_2013">Mi In-Ear (2013)</string>
