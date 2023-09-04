@@ -39,9 +39,6 @@
          during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
-    <!-- Whether device supports double tap to wake -->
-    <bool name="config_supportDoubleTapWake">true</bool>
-
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
          on the headphone/microphone jack. When false use the older uevent framework. -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
@@ -98,6 +95,9 @@
     <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
     <string name="config_SmartChargingResumeValue" translatable="false">0</string>
 	
+    <!-- Battery Health -->
+    <bool name="config_supportBatteryHealth">true</bool>    
+
 	<!-- Whether the device supports Smart Pixels -->
     <bool name="config_supportSmartPixels">true</bool>
 	
