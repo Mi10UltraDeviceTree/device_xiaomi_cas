@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021 The leafOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_cas.mk
+    $(LOCAL_DIR)/leaf_cas.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_cas-eng \
-    lineage_cas-user \
-    lineage_cas-userdebug
+    leaf_cas-eng \
+    leaf_cas-user \
+    leaf_cas-userdebug
