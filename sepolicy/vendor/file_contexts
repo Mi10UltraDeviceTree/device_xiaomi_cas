@@ -23,6 +23,9 @@
 # EFS
 /dev/block/sde[0-9]                                         u:object_r:efs_block_device:s0
 
+# Fastcharge HAL
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@[0-9]\.[0-9]-service\.xiaomi          u:object_r:hal_lineage_fastcharge_default_exec:s0
+
 # Fingerprint
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi                          u:object_r:hal_fingerprint_default_exec:s0
 
@@ -47,6 +50,9 @@
 # Hals
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.touchfeature@1\.0-service       u:object_r:hal_touchfeature_default_exec:s0
 /vendor/bin/mlipayd@1.1                                                  u:object_r:hal_mlipay_default_exec:s0
+
+# powershare
+/(vendor|system|vendor)/bin/hw/vendor\.lineage\.powershare@1\.0-service\.xiaomi_kona                           u:object_r:hal_lineage_powershare_default_exec:s0
 
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                            u:object_r:persist_subsys_file:s0
@@ -77,3 +83,12 @@
 # Xiaomi thermal daemon
 /vendor/bin/mi_thermald                                     u:object_r:mi_thermald_exec:s0
 /data/vendor/thermal(/.*)?                                  u:object_r:vendor_thermal_data_file:s0
+
+# Label discard_max_bytes in /data partition
+/sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:vendor_sysfs_scsi_host:s0
+
+# Data files
+/data/vendor/dolby(/.*)?   u:object_r:vendor_data_file:s0
+
+# Dolby
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                                        u:object_r:hal_dms_default_exec:s0
