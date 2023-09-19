@@ -72,7 +72,7 @@
         <!-- 0.8 Spacing, 0.8/11 = 0.072727273 -->
         <item name="android:letterSpacing">0.072727273</item>
     </style>
-	
+
     <style name="TextAppearance.Medium" parent="@android:style/TextAppearance.Material.Medium" />
 
     <style name="SystemAlertDialogTheme" parent="@*android:style/Theme.DeviceDefault.Dialog.Alert.DayNight" />

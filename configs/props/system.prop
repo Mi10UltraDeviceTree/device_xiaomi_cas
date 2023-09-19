@@ -3,10 +3,7 @@ persist.vendor.bt.a2dp.aac_whitelist=false
 ro.bluetooth.library_name=libbluetooth_qti.so
 
 # Camera
-ro.miui.notch=1
 vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam
-persist.vendor.camera.privapp.list=com.android.camera
-log.tag.CHIUSECASE=ERROR
 
 # Charger
 ro.charger.enable_suspend=1
@@ -19,9 +16,6 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 
-# LMK
-ro.config.low_ram=false
-
 # RIL
 persist.vendor.radio.report_codec=1
 ril.subscription.types=NV,RUIM
@@ -29,21 +23,3 @@ ro.telephony.default_network=33,33
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
-
-# RIL Powersaving
-persist.radio.add_power_save=1
-pm.sleep_mode=1
-ro.ril.disable.power.collapse=0
-ro.ril.fast.dormancy.rule=1
-ro.ril.fast.dormancy.timeout=3
-ro.mot.eri.losalert.delay=100
-ro.vendor.use_data_netmgrd=true
-ro.vold.umsdirtyratio=20
-power.saving.mode=1
-
-# Pre-Rendering
-ro.vendor.perf.scroll_opt=true
-
-# Radio VoNR Calling
-persist.radio.is_vonr_enabled_0=true
-persist.radio.is_vonr_enabled_1=true

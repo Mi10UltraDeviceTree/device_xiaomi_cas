@@ -387,7 +387,11 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
-        <fqname>@2.3::IFactory/default</fqname>
+        <version>2.1</version>
+        <interface>
+            <name>IFactory</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <!-- Tether Offload -->
     <hal format="hidl">
@@ -487,6 +491,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <!--ANT-->
+    <hal format="hidl">
+        <name>com.dsi.ant</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAnt</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <!--TuiComm-->
     <hal format="hidl">
         <name>vendor.qti.hardware.tui_comm</name>
@@ -567,19 +581,5 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IQspmhal/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.dolby.hardware.dms</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IDms</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-	<hal format="hidl">
-        <name>vendor.google.google_battery</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.2::IGoogleBattery/default</fqname>
     </hal>
 </manifest>

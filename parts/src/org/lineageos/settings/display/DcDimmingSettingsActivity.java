@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015-2016 The CyanogenMod Project
- *               2017,2021-2022 The LineageOS Project
+ *               2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,22 +15,19 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.doze;
+package org.lineageos.settings.display;
 
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.widget.R;
+public class DcDimmingSettingsActivity extends PreferenceActivity {
 
-public class DozeSettingsActivity extends CollapsingToolbarBaseActivity {
-
-    private static final String TAG_DOZE = "doze";
+    private static final String TAG_DCDIMMING = "dcdimming";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        getFragmentManager().beginTransaction().replace(R.id.content_frame,
-                new DozeSettingsFragment(), TAG_DOZE).commit();
+        getFragmentManager().beginTransaction().replace(android.R.id.content,
+                new DcDimmingSettingsFragment(), TAG_DCDIMMING).commit();
     }
 }

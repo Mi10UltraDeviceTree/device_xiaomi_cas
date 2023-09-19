@@ -1,1 +1,0 @@
-dontaudit vendor_hal_neuralnetworks_default default_prop:file { open read };
