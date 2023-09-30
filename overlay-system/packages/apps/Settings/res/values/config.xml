@@ -39,4 +39,24 @@
     <bool name="config_show_refresh_rate_controls">true</bool>
     <bool name="config_supports_dynamic_refresh_rate_controls">true</bool>
 
+    <!-- Device specific doze package -->
+    <string name="config_customDozePackage">org.lineageos.settings/org.lineageos.settings.doze.DozeSettingsActivity</string>
+
+    <!-- Whether to show a preference item for mobile plan -->
+    <bool name="config_show_mobile_plan">false</bool>
+
+    <!-- Smart charging -->
+    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
+    <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
+    <string name="config_SmartChargingResumeValue" translatable="false">0</string>
+    
+    <!-- For Enabling Battery Heath -->
+    <bool name="config_supportBatteryHealth">true</bool>
+
+    <!-- Battery Health -->
+    <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
+    <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
+    <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
+
+
 </resources>
