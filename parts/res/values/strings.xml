@@ -119,4 +119,13 @@
     <string name="dc_dimming_enable_title">DC Dimming</string>
     <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
     <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
+
+	<!-- Touch -->
+    <string name="touch_game_mode_title">Touch Game Mode</string>
+    <string name="touch_response_title">Touch Response</string>
+    <string name="touch_response_summary">Touch Response Summary</string>
+    <string name="touch_sensitivity_title">Touch Sensitivity</string>
+    <string name="touch_sensitivity_summary">Touch Sensitivity Summary</string>    
+    <string name="touch_resistant_title">Touch Resistant</string>
+    <string name="touch_resistant_summary">Touch Resistant Summary</string>
 </resources>
