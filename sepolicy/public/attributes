@@ -8,3 +8,6 @@ attribute hal_misys_hwservice;
 attribute hal_misys;
 attribute vendor_fingerprint_prop;
 attribute thermal_data_file;
+attribute vendor_aware_available_prop;
+attribute hal_googlebattery_service;
+attribute hal_googlebattery;
